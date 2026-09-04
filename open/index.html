@@ -34,16 +34,22 @@
       box-shadow: 0 18px 45px rgba(39, 42, 38, 0.08);
     }
 
-    .icon {
-      width: 76px;
-      height: 76px;
+    .logo {
+      width: 96px;
+      height: 96px;
       margin: 0 auto 22px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 22px;
+      border-radius: 26px;
       background: #D8ECE7;
-      font-size: 38px;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
     }
 
     h1 {
@@ -99,7 +105,12 @@
 
   <main class="card">
 
-    <div class="icon">🦙</div>
+    <div class="logo">
+      <img
+        src="../tribulingo_llama.png"
+        alt="Tribulingo llama"
+      >
+    </div>
 
     <h1>Abrir Tribulingo</h1>
 
