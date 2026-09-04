@@ -18,9 +18,7 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-
       font-family: Arial, Helvetica, sans-serif;
-
       background: #FAF6EE;
       color: #272A26;
     }
@@ -28,87 +26,69 @@
     .card {
       width: 100%;
       max-width: 520px;
-
       background: #FFFDF8;
-
       border: 1px solid #E9E1D6;
       border-radius: 28px;
-
       padding: 36px 28px;
-
       text-align: center;
-
-      box-shadow:
-        0 18px 45px
-        rgba(39, 42, 38, 0.08);
+      box-shadow: 0 18px 45px rgba(39, 42, 38, 0.08);
     }
 
     .icon {
       width: 76px;
       height: 76px;
-
       margin: 0 auto 22px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 22px;
-
       background: #D8ECE7;
-
       font-size: 38px;
     }
 
     h1 {
       margin: 0 0 14px;
-
       font-size: 30px;
       line-height: 1.2;
     }
 
     p {
       margin: 0 0 28px;
-
       color: #626861;
-
       font-size: 17px;
       line-height: 1.5;
     }
 
+    button,
     .button {
       width: 100%;
       min-height: 54px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       padding: 14px 20px;
-
       border-radius: 15px;
-
-      background: #2F746B;
-      color: white;
-
-      text-decoration: none;
-
       font-size: 16px;
       font-weight: 700;
+      cursor: pointer;
+    }
+
+    button {
+      border: 0;
+      background: #2F746B;
+      color: white;
     }
 
     .store {
       margin-top: 14px;
-
       background: transparent;
       color: #2F746B;
-
       border: 1px solid #79A9A1;
+      text-decoration: none;
     }
 
     .note {
       margin-top: 22px;
-
       font-size: 13px;
       color: #7A817A;
     }
@@ -119,13 +99,9 @@
 
   <main class="card">
 
-    <div class="icon">
-      🦙
-    </div>
+    <div class="icon">🦙</div>
 
-    <h1>
-      Abrir Tribulingo
-    </h1>
+    <h1>Abrir Tribulingo</h1>
 
     <p>
       Si ya tienes Tribulingo instalado,
@@ -134,12 +110,9 @@
       puedes descargarla desde Google Play.
     </p>
 
-    <a
-      class="button"
-      href="intent://open#Intent;scheme=tribulingo;package=com.tribulingo.app;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.tribulingo.app;end"
-    >
+    <button type="button" onclick="openTribulingo()">
       Abrir Tribulingo
-    </a>
+    </button>
 
     <a
       class="button store"
@@ -153,6 +126,19 @@
     </div>
 
   </main>
+
+  <script>
+    function openTribulingo() {
+      window.location.href = 'tribulingo://open';
+
+      setTimeout(function () {
+        if (!document.hidden) {
+          window.location.href =
+            'https://play.google.com/store/apps/details?id=com.tribulingo.app';
+        }
+      }, 1800);
+    }
+  </script>
 
 </body>
 </html>
