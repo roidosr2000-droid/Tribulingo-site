@@ -46,14 +46,20 @@
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       background: #D8ECE7;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 25px;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
     }
 
     main {
@@ -233,7 +239,12 @@
 
     <header>
       <div class="brand">
-        <div class="brand-mark">🦙</div>
+        <div class="brand-mark">
+          <img
+            src="tribulingo_llama.png"
+            alt="Tribulingo llama"
+          >
+        </div>
         Tribulingo
       </div>
     </header>
@@ -259,11 +270,9 @@
           <div class="buttons">
             <a
               class="button android"
-              href="https://play.google.com/store/apps/details?id=com.tribulingo.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/open/"
             >
-              Descargar para Android
+              Abrir / Descargar Tribulingo
             </a>
 
             <div class="button ios">
