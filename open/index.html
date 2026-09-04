@@ -65,7 +65,6 @@
       line-height: 1.5;
     }
 
-    button,
     .button {
       width: 100%;
       min-height: 54px;
@@ -76,11 +75,10 @@
       border-radius: 15px;
       font-size: 16px;
       font-weight: 700;
-      cursor: pointer;
+      text-decoration: none;
     }
 
-    button {
-      border: 0;
+    .open {
       background: #2F746B;
       color: white;
     }
@@ -90,7 +88,6 @@
       background: transparent;
       color: #2F746B;
       border: 1px solid #79A9A1;
-      text-decoration: none;
     }
 
     .note {
@@ -121,9 +118,12 @@
       puedes descargarla desde Google Play.
     </p>
 
-    <button type="button" onclick="openTribulingo()">
+    <a
+      class="button open"
+      href="tribulingo://open"
+    >
       Abrir Tribulingo
-    </button>
+    </a>
 
     <a
       class="button store"
@@ -137,19 +137,6 @@
     </div>
 
   </main>
-
-  <script>
-    function openTribulingo() {
-      window.location.href = 'tribulingo://open';
-
-      setTimeout(function () {
-        if (!document.hidden) {
-          window.location.href =
-            'https://play.google.com/store/apps/details?id=com.tribulingo.app';
-        }
-      }, 1800);
-    }
-  </script>
 
 </body>
 </html>
