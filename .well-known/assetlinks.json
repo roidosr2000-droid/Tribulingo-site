@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tribulingo.app",
+      "sha256_cert_fingerprints": [
+        "0B:C9:D5:08:08:EA:99:5A:A0:C1:51:57:75:81:25:CD:DC:3C:DB:89:F9:66:42:A3:6A:69:C1:D6:C1:71:9B:FC"
+      ]
+    }
+  }
+]
