@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tribulingo — Lenguas originarias</title>
+
+  <meta
+    name="description"
+    content="Tribulingo es una aplicación dedicada a dar espacio digital a las lenguas originarias y sus variantes."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #FAF6EE;
+      color: #272A26;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 22px 24px;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #2F746B;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #D8ECE7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 40px 24px 70px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #D8ECE7;
+      color: #173E39;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin: 0 0 24px;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: #2F746B;
+    }
+
+    .intro {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #626861;
+      max-width: 700px;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .android {
+      background: #2F746B;
+      color: white;
+    }
+
+    .android:hover {
+      background: #255F58;
+    }
+
+    .ios {
+      background: #FFFDF8;
+      color: #626861;
+      border: 1px solid #D8D0C5;
+      cursor: default;
+    }
+
+    .card {
+      background: #FFFDF8;
+      border: 1px solid #E9E1D6;
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 18px 45px rgba(39, 42, 38, 0.08);
+    }
+
+    .card-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 22px;
+      background: #F7DDD2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #626861;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .stats {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid #E9E1D6;
+    }
+
+    .stats strong {
+      display: block;
+      font-size: 28px;
+      color: #2F746B;
+      margin-bottom: 4px;
+    }
+
+    .stats span {
+      color: #626861;
+      font-size: 15px;
+    }
+
+    footer {
+      border-top: 1px solid #E9E1D6;
+      padding: 24px;
+      color: #626861;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      main {
+        padding-top: 25px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .card {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="brand">
+        <div class="brand-mark">🦙</div>
+        Tribulingo
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+
+        <div>
+          <div class="tag">
+            Lenguas originarias · Comunidad · Preservación
+          </div>
+
+          <h1>
+            Cada lengua merece un <span>espacio digital.</span>
+          </h1>
+
+          <p class="intro">
+            Tribulingo reúne palabras, frases y verbos de lenguas
+            originarias y sus variantes, con la participación de
+            hablantes y colaboradores de diferentes comunidades.
+          </p>
+
+          <div class="buttons">
+            <a
+              class="button android"
+              href="https://play.google.com/store/apps/details?id=com.tribulingo.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Descargar para Android
+            </a>
+
+            <div class="button ios">
+              iPhone / iPad · Próximamente
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🌎</div>
+
+          <h2>Una comunidad de lenguas</h2>
+
+          <p>
+            Explora vocabulario, descubre diferentes variantes
+            lingüísticas y contribuye para que más palabras
+            continúen teniendo presencia en el mundo digital.
+          </p>
+
+          <div class="stats">
+            <strong>42</strong>
+            <span>lenguas y variantes en Tribulingo</span>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Tribulingo · Proyecto independiente para las lenguas originarias
+    </footer>
+
+  </div>
+</body>
+</html>
