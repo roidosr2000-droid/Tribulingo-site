@@ -65,12 +65,19 @@
       align-items: center;
       justify-content: center;
       padding: 14px 20px;
+      border: none;
       border-radius: 15px;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       font-weight: 700;
       text-decoration: none;
       background: #2F746B;
       color: white;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #255F58;
     }
 
     .note {
@@ -94,18 +101,46 @@
 
     <h1>Tribulingo para Android</h1>
 
-    <a
+    <button
       class="button"
-      href="https://play.google.com/store/apps/details?id=com.tribulingo.app"
+      type="button"
+      onclick="openGooglePlay()"
     >
       Actualizar / Descargar en Google Play
-    </a>
+    </button>
 
     <div class="note">
       Tribulingo · Lenguas originarias
     </div>
 
   </main>
+
+  <script>
+    function openGooglePlay() {
+      const packageName = 'com.tribulingo.app';
+
+      const webUrl =
+        'https://play.google.com/store/apps/details?id=' + packageName;
+
+      const isAndroid =
+        /Android/i.test(navigator.userAgent);
+
+      if (isAndroid) {
+        const intentUrl =
+          'intent://details?id=' + packageName +
+          '#Intent;' +
+          'scheme=market;' +
+          'package=com.android.vending;' +
+          'S.browser_fallback_url=' +
+          encodeURIComponent(webUrl) +
+          ';end';
+
+        window.location.href = intentUrl;
+      } else {
+        window.location.href = webUrl;
+      }
+    }
+  </script>
 
 </body>
 </html>
