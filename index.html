@@ -125,6 +125,7 @@
       text-decoration: none;
       font-size: 16px;
       font-weight: 700;
+      cursor: pointer;
     }
 
     .android {
@@ -138,9 +139,12 @@
 
     .ios {
       background: #FFFDF8;
-      color: #626861;
+      color: #272A26;
       border: 1px solid #D8D0C5;
-      cursor: default;
+    }
+
+    .ios:hover {
+      background: #F3EEE6;
     }
 
     .card {
@@ -268,16 +272,25 @@
           </p>
 
           <div class="buttons">
+
             <a
               class="button android"
-              href="/open/"
+              href="https://play.google.com/store/apps/details?id=com.tribulingo.app"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Abrir / Descargar Tribulingo
+              Descargar en Google Play
             </a>
 
-            <div class="button ios">
-              iPhone / iPad · Próximamente
-            </div>
+            <a
+              class="button ios"
+              href="https://apps.apple.com/es/app/tribulingo/id6809239923"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Descargar en App Store
+            </a>
+
           </div>
         </div>
 
@@ -293,7 +306,7 @@
           </p>
 
           <div class="stats">
-            <strong>42</strong>
+            <strong>43</strong>
             <span>lenguas y variantes en Tribulingo</span>
           </div>
         </div>
